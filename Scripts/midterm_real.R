@@ -56,4 +56,4 @@ tyler_running_pace <- tyler_running_pace %>%
   group_by(form, pace) %>% 
   mutate(avg_steps = mean(steps_per_minute, na.rm = TRUE)) %>% 
   select(form, pace, avg_steps)
-tyler_running_pace
+tyler_running_pace 
