@@ -1,7 +1,7 @@
 # Week 4 Homework
 
 library(tidyverse)
-# ^ Do we need to load in this every time?
+# ^ Do we need to load in this every time?----
 
 # Create a tibble named surveys from the portal_data_joined.csv file.
 surveys <- read_csv("data/portal_data_joined.csv")
@@ -10,6 +10,8 @@ surveys <- read_csv("data/portal_data_joined.csv")
 surveys %>% 
   filter(weight >30 & weight < 60) 
 surveys[1:6,]
+head(surveys)
+#Is there another way to print the first six columns?----
 
 #Create a new tibble showing the maximum weight for each species + sex combination and name it biggest_critters. 
 #Sort the tibble to take a look at the biggest and smallest species + sex combinations. 
@@ -107,4 +109,4 @@ surveys_avg_weight <- surveys_avg_weight %>%
   mutate(above_average = weight > mean_weight)
 surveys_avg_weight
 
-#Question: in the utate line, how did this know to be a logical answer column? Without an "if then" or "ifelse" function? 
+#Question: in the mutate line, how did this know to be a logical answer column? Without an "if then" or "ifelse" function? 
