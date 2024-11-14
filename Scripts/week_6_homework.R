@@ -15,6 +15,7 @@ gapminder %>%
   geom_point(aes(x = year, y = avg_le, color = continent))+
   geom_line(aes(x = year, y = avg_le, color = continent))
 
+## THIS IS NOT GOOD PRACTICE, SHOULD CREATE A NEW VARIABLE BEFORE PLOTTING INSTEAD OF INCLUDING IT IN THE FLOW OF PIPING.ALSO, BEST PRACTICE IS TO INCLUDE THE MAPPING AND AESTHETICS IN THE PART BEHIND GGPLOT INSTEAD OF THE INDICIDUAL COMPONENTS WITH THE POINTS AND LINES. 
 
 #Look at the following code and answer the following questions. What do you think the scale_x_log10() line of code is achieving? What about the geom_smooth() line of code? 
 ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +

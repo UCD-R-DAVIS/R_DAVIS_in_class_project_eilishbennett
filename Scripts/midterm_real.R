@@ -41,6 +41,8 @@ tyler_running_pace <- tyler_running_pace %>%
     T ~ "slow"
   ))
 
+#One problem with the "all else T" thing is that NA's will be included in this if you do not numerically categorize the slow category. 
+
 head(tyler_running_pace$pace_category)
 view(tyler_running_pace)
 
@@ -49,7 +51,7 @@ tyler_running_pace <- tyler_running_pace %>%
                           year > 2023 ~ "new"))
 view(tyler_running_pace)
 
-#Identify the average steps per minute for laps by form and pace, and generate a table showing these values with old and new as separate rows and pace categories as columns. Make sure that slow speed is the second column, medium speed is the third column, and fast speed is the fourth column (hint: think about what the select() function does). 
+#NUMBER 5: Identify the average steps per minute for laps by form and pace, and generate a table showing these values with old and new as separate rows and pace categories as columns. Make sure that slow speed is the second column, medium speed is the third column, and fast speed is the fourth column (hint: think about what the select() function does). 
 view(tyler_running_pace$steps_per_minute)
 
 tyler_running_pace <- tyler_running_pace %>% 
@@ -57,3 +59,7 @@ tyler_running_pace <- tyler_running_pace %>%
   mutate(avg_steps = mean(steps_per_minute, na.rm = TRUE)) %>% 
   select(form, pace, avg_steps)
 tyler_running_pace 
+
+#FINISHING POINT, MIDTERM FEEDABCK: Great job using commenting on your code and documenting your process. Looks like you are understanding how to filter and write conditional statements. I suggest reviewing group_by, summarize, and pivot_wider/pivot_longer when you get a chance & then try completing the last two prompts of the midterm.
+
+#NUMBER 6: Finally, Tyler thinks he’s been doing better since July after the doctors filmed him running again and provided new advice. Summarize the minimum, mean, median, and maximum steps per minute results for all laps (regardless of pace category) run between January - June 2024 and July - October 2024 for comparison.
