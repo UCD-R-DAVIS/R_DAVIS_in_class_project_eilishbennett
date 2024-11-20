@@ -4,7 +4,6 @@ library(dplyr)
 library(tidyverse)
 library(cowplot)
 library(plotly)
-library(gapmin)
 
 #Install data 
 gapminder <- read_csv("https://gge-ucd.github.io/R-DAVIS/data/gapminder.csv")
@@ -16,6 +15,9 @@ gapminder_wider <- gapminder %>%
   mutate(change = `2007` - `2002`) %>% 
   filter(continent != "Oceania")
 
+library(ggplot2)
+library(ggthemes)
+#Difference between backtics and quotes 
 ?facet_wrap
 #Facets make multiple charts from the same dataset, whereas plot_grid makes multiple from diff datasets 
 gapminder_viz <- 
