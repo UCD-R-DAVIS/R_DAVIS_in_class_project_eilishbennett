@@ -66,4 +66,5 @@ ggplot(after_intervention, mapping = aes(x = steps_per_minute, y = minutes_per_m
   ggtitle("Relationship between Tyler's Speed and Cadence")+
   geom_smooth(method = "lm", se = FALSE, color = "orange")
 
-#did not finish the final task of the exam 
+#did not finish the final task of the exam after 1 hour... i couldn't tell if we were meant to do it in 1 or two hours 
+
